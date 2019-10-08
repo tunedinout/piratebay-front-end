@@ -27,11 +27,20 @@ export default class App extends React.Component {
     getDataFromAPI = () => {
         console.log(this.state);
         fetch(`http://localhost:${apiPort}/api/getData`)
-            .then((data) => data.json())
+            .then((data) => {
+                console.log(data);
+                return data.json();
+
+            })
             .then((res) => {
-                this.setState({ list: res.data });
                 console.log(res.data);
+                this.setState({ list: res.data });
+                console.log(this.state.list);
             });
+        // .then(response => response.body)
+        // .then(body => {
+        //     console.log(body);
+        // })
     }
 
     filterSuggestions(inputString) {
