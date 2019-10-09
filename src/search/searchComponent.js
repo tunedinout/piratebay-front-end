@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Search from '../search/search'
+import SearchSubComponent from './searchSubCmp.js'
 
 
 
 const apiPort = 3000;
-export default class App extends React.Component {
+export default class SearchComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,13 +20,14 @@ export default class App extends React.Component {
 
     onInputChange(event) {
         event.preventDefault();
+        console.log(event.target.value)
         if (event.target.value !== '')
             this.filterSuggestions(event.target.value);
     }
 
-    getDataFromAPI = () => {
+    getDataFromAPI = (inputString) => {
         console.log(this.state);
-        fetch(`http://localhost:${apiPort}/api/getData`)
+        fetch(`http://localhost:${apiPort}/api/getData?search=${inputString}`)
             .then((data) => {
                 console.log(data);
                 return data.json();
@@ -44,12 +45,12 @@ export default class App extends React.Component {
     }
 
     filterSuggestions(inputString) {
-        this.getDataFromAPI();
+        this.getDataFromAPI(inputString);
     }
 
 
     render() {
-        return (<Search searchSuggest={this.state.list} onInputChange={this.onInputChange} />)
+        return (<SearchSubComponent searchSuggest={this.state.list} onInputChange={this.onInputChange} />)
     }
 
 }

@@ -9,10 +9,12 @@
 }
 
 .dropdown__content{
-
+   
 }
 
 #dropdown-input{
+    top: 0;
+    position:sticky;
     margin:7px;
     /* padding:9px; */
     line-height: 16px;
@@ -62,7 +64,10 @@
 
 
 .dropdown__suggest-list{
-    display: blcok;;
+    height: 200px;;
+    overflow: scroll;
+
+    display: block;;
     list-style: none;
     margin-top:7px; 
     margin-left:1px;  
