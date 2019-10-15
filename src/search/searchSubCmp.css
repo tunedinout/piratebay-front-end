@@ -47,9 +47,9 @@
     display: flex; 
     border:solid;
     border-width: 1px;
-    border-color: rgb(241, 126, 72); 
+    border-color: rgb(88, 240, 207); 
     border-radius:10px/50%;
-    box-shadow: 1px 3px #888;
+    box-shadow: 1px 1px #888;
 
     font-size:30px;
     font-weight: lighter;
@@ -59,7 +59,7 @@
 }
 
 .dropdown__input-container-dark{
-    border-color: rgb(189, 125, 7); 
+    border-color: rgb(13, 175, 148); 
 }
 
 
@@ -74,6 +74,7 @@
     transform: translateX(+2%);
     opacity: 0.7;
     width:400px;
+    cursor: pointer;
     
     
 }
@@ -84,7 +85,7 @@
     letter-spacing: 2px;
     border-bottom: solid;
     border-bottom-width: 0.1px;
-    border-bottom-color: rgb(248, 232, 207)
+    border-bottom-color: rgb(2, 173, 108)
 
 }
 

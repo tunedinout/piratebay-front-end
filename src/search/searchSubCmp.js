@@ -7,8 +7,7 @@ import SearchIcon from '@material-ui/icons/SearchSharp';
 export default class SearchSubComponent extends React.Component {
 
     onClick() {
-        // console.log(event);
-        //make it darker
+        // console.log(event);      
         let dom = document.getElementsByClassName('dropdown__input-container');
         dom = dom[0];
         dom.classList.add('dropdown__input-container-dark');
@@ -22,13 +21,10 @@ export default class SearchSubComponent extends React.Component {
     }
 
     onListItemClick(e, index) {
-        console.log(e.target);
-        //change the input text of dropdown-input
-        //console.log(document.getElementById('dropdown-input').value);
-        //document.getElementById('dropdown-input').children[0].textContent = e.target.value;
+        //console.log(e.target);
         document.getElementById('dropdown-input').value =
             document.getElementById(`dropdown-txt-${index}`).childNodes[0].data;
-        //console.log(document.getElementById(`dropdown-txt-${index}`).childNodes[0].data);
+
     }
     render() {
         return <div className="dropdown">
