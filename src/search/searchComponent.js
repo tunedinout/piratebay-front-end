@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SearchSubComponent from './searchSubCmp.js'
 
 
 
-const apiPort = 3000;
 export default class SearchComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -19,11 +17,14 @@ export default class SearchComponent extends React.Component {
     }
 
     getDataFromAPI = (inputString) => {
-        fetch(`http://localhost:${apiPort}/api/getData?search=${inputString}`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=85f25ffa5ab3017b7273d2a1d0018133&language=en-US&query=${inputString}&page=1&include_adult=${false}`)
             .then((data) => data.json())
-            .then((res) => {
-                this.setState({ list: res.data });
-                //console.log(this.state.list);
+            .then((data) => {
+                let listOfTitles = [];
+                data.results.forEach(element => {
+                    listOfTitles.push(element.title)
+                });
+                this.setState({ list: listOfTitles })
             });
 
     }
