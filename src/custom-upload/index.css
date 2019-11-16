@@ -1,0 +1,25 @@
+
+
+.choose-file-container {
+    width: 300px ; 
+    
+    border: 1px solid rgb(7, 7, 243);
+    border-radius: 5px;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
+}
+.choose-file-container > input{
+    width: 100%;
+}
+.choose-file{
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1.6px;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+.choose-file-container > input {
+
+}
