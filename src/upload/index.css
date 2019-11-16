@@ -1,12 +1,12 @@
 /* https://codepen.io/sazzad/pen/antDJ */
-
-.file-upload {
+.upload-container{
 	display: block;
+}
+.file-upload {
+	margin:2px;
+	width: 80%;
+	float: left;
 	position: relative;
-	/* 
-		remove
-	 */
-	/* text-align: center; */
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
 }
@@ -14,11 +14,12 @@
  .file-upload .file-select {
 	display: block;
 	border: 2px solid #dce4ec;
+	border-radius: 5px;
 	 color: #34495e;
 	height: 100%;
 	width: 100%;
 	cursor: pointer;
-	
+	float: left;
 	height: 40px;
 	line-height: 40px;
 
@@ -91,68 +92,33 @@
 	filter: alpha(opacity=0);
 }
 
-
-/* No change for below selectors */
-
-/* .file-upload .file-select.file-select-disabled {
-	opacity: 0.65;
-}  */
-/* No change for below selectors */
-/* .file-upload .file-select.file-select-disabled:hover {
-	cursor: default;
-	display: block;
-	border: 2px solid #dce4ec;
-	color: #34495e;
-	cursor: pointer;
+.file-upload-button-container{
+	width : 60px;
 	height: 40px;
+	margin: 2px;
 	line-height: 40px;
-	margin-top: 5px;
-	text-align: left;
-	background: #FFFFFF;
-	overflow: hidden;
-	position: relative;
-}
-
-.file-upload .file-select.file-select-disabled:hover .file-select-button {
-	background: #dce4ec;
-	color: #666666;
-	padding: 0 10px;
+	/* padding: 5px; */
+	margin-left: 7px;
 	display: inline-block;
-	height: 40px;
-	line-height: 40px;
-}
-
-.file-upload .file-select.file-select-disabled:hover .file-select-name {
-	line-height: 40px;
-	display: inline-block;
-	padding: 0 10px;
-}
-*/
-
-
-
-
-/* .file-upload .file-upload-button-container{
-	
-	display: inline-block;
-	position: absolute;
-	top:0;
-	right:0;
-	
-	height: 40px;
-	line-height: 40px;
-	background: none;
 	text-align: center;
 	vertical-align: center;
-   
-} 
+	
+	
+}
 
-.file-upload .file-upload-button-container .file-upload-button {
-	display: inline-block;
-	width: 80px;
-	background: #3fa46a;
-	color: white;
+.file-upload-button{
+	margin: 0;
+	padding: 0;
+	border: none;
 	width: 100%;
-	height: 40px;
-	line-height: 40px;
-} */
+	height: 100%;
+	background : rgb(155, 181, 252);
+	/* background: #215ecf; */
+	color:white;
+	letter-spacing: 2px;
+	border-radius: 4px;
+}
+
+.file-upload-button.active{
+	background: #215ecf;
+}

@@ -32,17 +32,23 @@ class Upload extends React.Component {
     }
     render() {
         let fileSelectClass = this.state.selectedFile ? 'file-upload active' : 'file-upload'
+        let uploadSelectClass = this.state.selectedFile ? 'file-upload-button active' : 'file-upload-button'
         return (
-            <div className={fileSelectClass} >
-                <div className="file-select" >
-                    <div className="file-select-button" id="fileName">{this.state.selectedFile ? 'Change File' : 'Choose File'}</div>
-                    <div className="file-select-name" id="noFile">{this.state.selectedFile ? this.state.selectedFile.name + '' : 'No file chosen...'}</div>
-                    <input type="file" name="file" id="chooseFile" onChange={this.handleInputChange} />
+            <div className="upload-container">
+                <div className={fileSelectClass} >
+                    <div className="file-select" >
+                        <div className="file-select-button" id="fileName">{this.state.selectedFile ? 'Change File' : 'Choose File'}</div>
+                        <div className="file-select-name" id="noFile">{this.state.selectedFile ? this.state.selectedFile.name + '' : 'No file chosen...'}</div>
+                        <input type="file" name="file" id="chooseFile" onChange={this.handleInputChange} />
+                    </div>
+
                 </div>
                 <div className="file-upload-button-container">
-                    <button className="file-upload-button" onClick={this.uploadHandler}>Upload</button>
+                    <button className={uploadSelectClass} onClick={this.uploadHandler}>Upload</button>
                 </div>
+
             </div>
+
         )
     }
 }
